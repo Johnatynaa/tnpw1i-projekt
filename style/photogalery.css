@@ -1,0 +1,175 @@
+* {
+    font-family: roboto, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+hr {
+    width: 60%;
+    height: 2px;
+    background-color: #000000;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.header {
+    /* 1. Nastavíme absolutní pozici, aby hlavička 'levitovala' nad obsahem */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Musíme zajistit, aby se roztáhla přes celou šířku */
+    
+    /* 2. Změníme barvu pozadí na průhlednou */
+    background-color: transparent; 
+    
+    /* 3. Pojistka, aby byla hlavička vždy 'nejvýš' a nic ji nepřekrylo */
+    z-index: 1000;
+
+    /* Zbytek tvého kódu zůstává stejný */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px
+}
+
+/* Styl pro logo */
+.logo {
+    display: flex;
+    align-items: center; /* Tohle srovná text přesně na střed k výšce obrázku */
+}
+
+.logo a {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none; /* Odstraní podtržení u názvu firmy */
+}
+
+.logo img {
+    height: 50px; /* Nastaví výšku loga, aby bylo konzistentní */
+    margin-right: 10px; /* Malá mezera mezi logem a textem */
+}
+
+/* Styl pro navigační menu */
+/* Obal pro samotné odkazy (seznam) */
+.hlavni-menu {
+    display: flex; /* Seřadí položky seznamu vedle sebe */
+    list-style: none; /* Odstraní nevzhledné odrážky puntíků */
+    gap: 30px; /* Nastaví rovnoměrné mezery mezi jednotlivými slovy v menu */
+}
+
+/* Styl pro jednotlivé odkazy v menu */
+.hlavni-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s; /* Plynulá animace, když na odkaz najedeš myší */
+}
+
+/* Zvýraznění aktivní stránky (tvůj požadavek na podtržení) */
+.hlavni-menu a.aktivni {
+    text-decoration: underline;
+    text-underline-offset: 6px; /* Posune čáru kousek pod text, vypadá to moderněji */
+}
+
+/* Efekt po najetí myší na ostatní odkazy */
+.hlavni-menu a:hover {
+    color: #a0a0a0;
+}
+
+/* #region Hero banner 1 */
+/* Styl pro hero banner */
+.hero-banner {
+    /* Tady se děje to kouzlo - vložíš fotku na pozadí */
+    /* Nezapomeň upravit cestu k obrázku podle tvých složek */
+     background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('../images/photogalery/background1.png');
+     
+    
+    /* Tyto dvě vlastnosti zajistí, že se obrázek nezdeformuje a vyplní celý blok */
+    background-size: cover;
+    background-position: center;
+    
+    /* Nastavíme minimální výšku banneru, aby byl pěkně velký */
+    /* Můžeš zkusit i hodnotu např. '80vh' (80 % výšky obrazovky) */
+    min-height: 700px; 
+    
+    /* Znovu použijeme náš oblíbený Flexbox pro vycentrování textu uvnitř */
+    display: flex;
+    justify-content: center; /* Horizontálně na střed */
+    align-items: center;     /* Vertikálně na střed */
+}
+
+/* Stylování samotného textu */
+.hero-obsah {
+    text-align: center; /* Aby byly oba nadpisy vycentrované vůči sobě */
+}
+
+.hero-obsah h1 {
+    color: #ffffff;
+    font-size: 60px;
+    margin-bottom: 10px; /* Malá mezera mezi nadpisy */
+    letter-spacing: 2px; /* Lehce roztáhne písmena od sebe pro modernější vzhled */
+}
+/*#endregion*/
+
+/*#region Fotogalerie */
+.sekce-galerie {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Samotná mřížka */
+.grid-galerie {
+    display: grid;
+    /* ZDE JE TO KOUZLO: Udělej 3 sloupce, každý o velikosti 1 zlomku (1fr = 1 fraction) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Nastaví dokonalé mezery 20px mezi všemi fotkami i řádky */
+    max-width: 1200px; /* Zabrání tomu, aby se galerie na 4K monitoru nehezky roztáhla */
+    margin: 40px auto 0; /* Vycentruje celou mřížku na střed obrazovky */
+}
+
+/* Reset pro výchozí chování tagu figure */
+.foto-polozka {
+    margin: 0;
+    overflow: hidden; /* Důležité pro hover efekt - aby se zvětšená fotka nevylila ven */
+    border-radius: 8px; /* Jemně zaoblené rohy působí luxusněji */
+}
+
+/* Nastavení samotných obrázků */
+.foto-polozka img {
+    width: 100%;
+    height: 300px; /* Natvrdo určíme výšku, aby to udělalo přesně ty 2 řádky */
+    object-fit: cover; /* Ořízne obrázek tak, aby vyplnil prostor bez deformace */
+    display: block; /* Odstraní drobnou neviditelnou mezeru, co dělají obrázky */
+    transition: transform 0.4s ease; /* Plynulá animace */
+}
+
+/* Prémiový detail: Fotka se po najetí myší lehce přiblíží */
+.foto-polozka img:hover {
+    transform: scale(1.05); /* Zvětší obrázek o 5 % */
+    cursor: pointer;
+}
+/* #endregion */
+
+/* #region Footer */
+.zapati {
+    background-color: #f9f9f9;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+.zapati .zapati-text p{
+    margin: 10px;
+}
+/* #endregion */
