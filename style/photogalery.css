@@ -172,4 +172,9 @@ hr {
 .zapati .zapati-text p{
     margin: 10px;
 }
+
+.email{
+    text-decoration: none;
+    color: #000000;
+}
 /* #endregion */
