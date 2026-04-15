@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt : Teriyaki Boyz</title>
+    <link rel="stylesheet" href="style/same-style.css">
+    <link rel="stylesheet" href="style/contact.css">
+    <link rel="icon" href="images/Teriyaki-boyz.png" type="image/x-icon">
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <div class="logo">
+            <img src="images/Teriyaki-boyz.png" alt="Teriyaki Boyz logo">
+            <a href="index.html">Teriyaki Boyz</a>
+        </div>
+
+        <nav>
+            <ul class="hlavni-menu">
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="services.html">Služby</a></li>
+                <li><a href="photogalery.html">Fotogalerie</a></li>
+                <li><a href="merch.html">Merch</a></li>
+                <li><a href="contact.html" class="aktivni">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main logo with text -->
+    <section class="hero-banner">
+        <div class="hero-obsah">
+            <h1>KONTAKT</h1>
+        </div>
+    </section>
+
+    <!-- Contact section with form and contact details -->
+    <section class="kontakt-sekce">
+        <div class="kontakt-grid">
+
+            <div class="kontakt-formular">
+                <form action="#" method="POST">
+
+                    <label for="jmeno">Jméno a příjmení:</label>
+                    <input type="text" id="jmeno" name="jmeno" required>
+
+                    <label for="sluzba">Zajímám se o:</label>
+                    <select id="sluzba" name="sluzba" required>
+                        <option value="" disabled selected>Vyberte z možností...</option>
+                        <option value="merch">Rezervace merche</option>
+                        <option value="oprava">Oprava</option>
+                        <option value="tuning">Tuning</option>
+                        <option value="import">Import vozidla</option>
+                    </select>
+
+                    <label for="zprava">Zpráva:</label>
+                    <textarea id="zprava" name="zprava" rows="7" required></textarea>
+
+                    <button type="submit" class="btn-odeslat">ODESLAT</button>
+
+                </form>
+            </div>
+
+            <div class="kontakt-udaje">
+                <h2>KONTAKTUJTE NÁS</h2>
+                <p class="podnadpis">Pokusíme se odepsat co nejdříve</p>
+
+                <address>
+                    <div class="kontakt-polozka">
+                        <strong>Adresa:</strong><br>
+                        Koutníkova, Hradec Králové 16, 503 01
+                    </div>
+
+                    <div class="kontakt-polozka">
+                        <strong>Gmail:</strong><br>
+                        <a href="mailto:teriyaki.boyz.motorworks@gmail.com">teriyaki.boyz.motorworks@gmail.com</a>
+                    </div>
+
+                    <div class="kontakt-polozka">
+                        <strong>Telefonní číslo:</strong><br>
+                        <a href="tel:+420123456789">+420 ### ### ###</a>
+                    </div>
+                </address>
+            </div>
+
+        </div>
+        <hr>
+
+    </section>
+
+    <!-- Footer with contact information and copyright -->
+    <section class="zapati">
+        <div class="zapati-text">
+            <p class="skolni-projekt">
+                <b>Upozornění:</b> Tento web je vytvořen výhradně jako studentský zápočtový projekt.
+            </p>
+            <p>Máte dotaz? Napište nám: <a class="email"
+                    href="mailto:teriyaki.boyz.motorworks@gmail.com">teriyaki.boyz.motorworks@gmail.com</a></p>
+            <p>
+                <small>&copy; 2026 Marek Bulíček. Všechna práva vyhrazena.</small><br>
+                <small>Poslední aktualizace: 15. dubna 2026</small>
+            </p>
+        </div>
+    </section>
+
 </body>
+
 </html>

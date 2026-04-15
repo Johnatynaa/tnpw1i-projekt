@@ -1,0 +1,104 @@
+* {
+    font-family: roboto, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+hr {
+    width: 60%;
+    height: 2px;
+    background-color: #000000;
+    margin: 40px auto;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.hlavni-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.hlavni-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.hlavni-menu a.aktivni {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.hlavni-menu a:hover {
+    color: #a0a0a0;
+}
+
+.hero-banner {
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-obsah {
+    text-align: center;
+}
+
+.hero-obsah h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.zapati {
+    background-color: #f9f9f9;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+.zapati .zapati-text p {
+    margin: 10px;
+}
+
+.email {
+    text-decoration: none;
+    color: #000000;
+}

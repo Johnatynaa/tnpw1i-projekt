@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogalerie : Teriyaki Boyz</title>
+    <link rel="stylesheet" href="style/same-style.css">
     <link rel="stylesheet" href="style/photogalery.css">
+    <link rel="icon" href="images/Teriyaki-boyz.png" type="image/x-icon">
 </head>
+
 <body>
-    
+
     <header class="header">
         <div class="logo">
             <img src="images/Teriyaki-boyz.png" alt="Teriyaki Boyz logo">
@@ -32,15 +36,81 @@
         </div>
     </section>
 
-    <!-- Information section about the company and services -->
+    <!-- Photo gallery section -->
     <section class="sekce-galerie">
         <div class="grid-galerie">
-            <figure class="foto-polozka"><img src="images/photogalery/photo1.jpg" alt="McLaren na okruhu COTA s nádherným polepem na styl Českého letecva."></figure>
-            <figure class="foto-polozka"><img src="images/photogalery/photo2.png" alt="Aston Martin na okruhu Qatar s polepem na styl Ptakopyska Perryho."></figure>
-            <figure class="foto-polozka"><img src="images/photogalery/photo3.png" alt="BMW M3 na okruhu Le Mans s polepem na styl plošný spoj."></figure>
-            <figure class="foto-polozka"><img src="images/photogalery/photo4.png" alt="Ferrari na okruhu Bahrain s polepem na styl japonského umění Kintsugi."></figure>
-            <figure class="foto-polozka"><img src="images/photogalery/photo5.png" alt="McLaren na okruhu Interlagos s nadhérným japonským polepem s červenými okvětními lístky."></figure>
-            <figure class="foto-polozka"><img src="images/photogalery/photo6.png" alt="McLaren na okruhu Monza s speciálním polepem na styl různého mixu barev, konkrétně modrá, fialová a bílá."></figure>
+            <figure class="foto-polozka">
+                <a href="#velka-fotka-1">
+                    <img src="images/photogalery/photo1.jpg"
+                        alt="McLaren na okruhu COTA s nádherným polepem na styl Českého letecva.">
+                </a>
+            </figure>
+            <div id="velka-fotka-1" class="lightbox">
+                <a href="#_" class="lightbox-zavrit"></a>
+                <img src="images/photogalery/photo1.jpg"
+                    alt="McLaren na okruhu COTA s nádherným polepem na styl Českého letecva.">
+            </div>
+
+            <figure class="foto-polozka">
+                <a href="#velka-fotka-2">
+                    <img src="images/photogalery/photo2.png"
+                        alt="Aston Martin na okruhu Qatar s polepem na styl Ptakopyska Perryho.">
+                </a>
+            </figure>
+            <div id="velka-fotka-2" class="lightbox">
+                <a href="#_" class="lightbox-zavrit"></a>
+                <img src="images/photogalery/photo2.png"
+                    alt="Aston Martin na okruhu Qatar s polepem na styl Ptakopyska Perryho.">
+            </div>
+
+
+            <figure class="foto-polozka">
+                <a href="#velka-fotka-3">
+                    <img src="images/photogalery/photo3.png"
+                        alt="BMW M3 na okruhu Le Mans s polepem na styl plošný spoj.">
+                </a>
+            </figure>
+            <div id="velka-fotka-3" class="lightbox">
+                <a href="#_" class="lightbox-zavrit"></a>
+                <img src="images/photogalery/photo3.png" alt="BMW M3 na okruhu Le Mans s polepem na styl plošný spoj.">
+            </div>
+
+            <figure class="foto-polozka">
+                <a href="#velka-fotka-4">
+                    <img src="images/photogalery/photo4.png"
+                        alt="Ferrari na okruhu Bahrain s polepem na styl japonského umění Kintsugi.">
+                </a>
+            </figure>
+            <div id="velka-fotka-4" class="lightbox">
+                <a href="#_" class="lightbox-zavrit"></a>
+                <img src="images/photogalery/photo4.png"
+                    alt="Ferrari na okruhu Bahrain s polepem na styl japonského umění Kintsugi.">
+            </div>
+
+            <figure class="foto-polozka">
+                <a href="#velka-fotka-5">
+                    <img src="images/photogalery/photo5.png"
+                        alt="McLaren na okruhu Interlagos s nadhérným japonským polepem s červenými okvětními lístky.">
+                </a>
+            </figure>
+            <div id="velka-fotka-5" class="lightbox">
+                <a href="#_" class="lightbox-zavrit"></a>
+                <img src="images/photogalery/photo5.png"
+                    alt="McLaren na okruhu Interlagos s nadhérným japonským polepem s červenými okvětními lístky.">
+            </div>
+
+            <figure class="foto-polozka">
+                <a href="#velka-fotka-6">
+                    <img src="images/photogalery/photo6.png"
+                        alt="McLaren na okruhu Monza s speciálním polepem na styl různého mixu barev, konkrétně modrá, fialová a bílá.">
+                </a>
+            </figure>
+            <div id="velka-fotka-6" class="lightbox">
+                <a href="#_" class="lightbox-zavrit"></a>
+                <img src="images/photogalery/photo6.png"
+                    alt="McLaren na okruhu Monza s speciálním polepem na styl různého mixu barev, konkrétně modrá, fialová a bílá.">
+            </div>
+
         </div>
         <hr>
     </section>
@@ -51,13 +121,15 @@
             <p class="skolni-projekt">
                 <b>Upozornění:</b> Tento web je vytvořen výhradně jako studentský zápočtový projekt.
             </p>
-            <p>Máte dotaz? Napište nám: <a class="email" href="mailto:teriyaki.boyz.motorworks@gmail.com">teriyaki.boyz.motorworks@gmail.com</a></p>
+            <p>Máte dotaz? Napište nám: <a class="email"
+                    href="mailto:teriyaki.boyz.motorworks@gmail.com">teriyaki.boyz.motorworks@gmail.com</a></p>
             <p>
                 <small>&copy; 2026 Marek Bulíček. Všechna práva vyhrazena.</small><br>
-                <small>Poslední aktualizace: 13. dubna 2026</small>
+                <small>Poslední aktualizace: 15. dubna 2026</small>
             </p>
         </div>
     </section>
 
 </body>
+
 </html>

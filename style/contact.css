@@ -1,0 +1,74 @@
+/* #region Hero banner 1 */
+/* Styl pro hero banner */
+.hero-banner {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../images/contact/background1.jpg');
+}
+
+.hero-obsah h1 {
+    color: #ffffff;
+}
+
+/*#endregion*/
+
+/* #region Kontakt */
+
+.kontakt-sekce {
+    background-color: #f9f9f9;
+    padding: 1px 20px;
+}
+
+.kontakt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    /* Obyčejná mezera mezi sloupci */
+    max-width: 900px;
+    /* Nastaví maximální šířku celého bloku */
+    margin: 60px auto;
+}
+
+/* --- LEVÁ STRANA: Formulář --- */
+.kontakt-formular label {
+    display: block;
+    /* Hodí popisek nad políčko */
+    margin-bottom: 5px;
+}
+
+/* Obyčejná políčka bez složitého designu */
+.kontakt-formular input,
+.kontakt-formular select,
+.kontakt-formular textarea {
+    width: 100%;
+    /* Aby políčka vyplnila sloupec */
+    margin-bottom: 15px;
+    /* Odsazení pod políčkem */
+}
+
+.kontakt-formular textarea {
+    resize: vertical;
+    /* Povolí roztahování pouze nahoru a dolů */
+}
+
+/* Obyčejné tlačítko */
+.btn-odeslat {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* --- PRAVÁ STRANA: Kontaktní údaje --- */
+/* Odstranění kurzívy, kterou prohlížeč automaticky dává tagu address */
+.kontakt-udaje address {
+    font-style: normal;
+    padding-top: 20px;
+}
+
+/* Obyčejné mezery mezi kontakty */
+.kontakt-polozka {
+    margin-bottom: 20px;
+}
+
+/* #endregion */

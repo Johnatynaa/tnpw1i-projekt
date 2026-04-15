@@ -1,92 +1,23 @@
-* {
-    font-family: roboto, sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-hr {
-    width: 60%;
-    height: 2px;
-    background-color: #000000;
-    margin: 40px auto;
-}
-
-.header {
-    /* 1. Nastavíme absolutní pozici, aby hlavička 'levitovala' nad obsahem */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Musíme zajistit, aby se roztáhla přes celou šířku */
-    
-    /* 2. Změníme barvu pozadí na průhlednou */
-    background-color: transparent; 
-    
-    /* 3. Pojistka, aby byla hlavička vždy 'nejvýš' a nic ji nepřekrylo */
-    z-index: 1000;
-
-    /* Zbytek tvého kódu zůstává stejný */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px
-}
-
-/* Styl pro logo */
-.logo {
-    display: flex;
-    align-items: center; /* Tohle srovná text přesně na střed k výšce obrázku */
-}
-
-.logo a {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none; /* Odstraní podtržení u názvu firmy */
-}
-
-.logo img {
-    height: 50px; /* Nastaví výšku loga, aby bylo konzistentní */
-    margin-right: 10px; /* Malá mezera mezi logem a textem */
-}
-
-/* Styl pro navigační menu */
-/* Obal pro samotné odkazy (seznam) */
-.hlavni-menu {
-    display: flex; /* Seřadí položky seznamu vedle sebe */
-    list-style: none; /* Odstraní nevzhledné odrážky puntíků */
-    gap: 30px; /* Nastaví rovnoměrné mezery mezi jednotlivými slovy v menu */
-}
-
-/* Styl pro jednotlivé odkazy v menu */
-.hlavni-menu a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s; /* Plynulá animace, když na odkaz najedeš myší */
-}
-
-/* Zvýraznění aktivní stránky (tvůj požadavek na podtržení) */
-.hlavni-menu a.aktivni {
-    text-decoration: underline;
-    text-underline-offset: 6px; /* Posune čáru kousek pod text, vypadá to moderněji */
-}
-
-/* Efekt po najetí myší na ostatní odkazy */
-.hlavni-menu a:hover {
-    color: #a0a0a0;
-}
-
 /* #region Hero banner 1 */
 /* Styl pro hero banner */
 .hero-banner {
+    background-image: url("../images/services/background1.png");
+}
+
+.hero-obsah h1 {
+    color: #ffffff;
+}
+
+/*#endregion*/
+
+/* #region Hero banner 2 */
+/* Styl pro sekci hero banner 2 */
+.hero-banner-2 {
     /* Tady se děje to kouzlo - vložíš fotku na pozadí */
     /* Nezapomeň upravit cestu k obrázku podle tvých složek */
-    background-image: url("../images/services/background1.png"); 
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+        url('../images/services/background2.jpg');
     
     /* Tyto dvě vlastnosti zajistí, že se obrázek nezdeformuje a vyplní celý blok */
     background-size: cover;
@@ -94,7 +25,7 @@ hr {
     
     /* Nastavíme minimální výšku banneru, aby byl pěkně velký */
     /* Můžeš zkusit i hodnotu např. '80vh' (80 % výšky obrazovky) */
-    min-height: 700px; 
+    min-height: 500px; 
     
     /* Znovu použijeme náš oblíbený Flexbox pro vycentrování textu uvnitř */
     display: flex;
@@ -103,18 +34,46 @@ hr {
 }
 
 /* Stylování samotného textu */
-.hero-obsah {
+.hero-obsah-2 {
     text-align: center; /* Aby byly oba nadpisy vycentrované vůči sobě */
 }
 
-.hero-obsah h1 {
+.hero-obsah-2 .kontakt{ 
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 50px;
+    margin-top: 20px;
     color: #ffffff;
-    font-size: 60px;
+}
+
+.hero-obsah-2 h2 {
+    color: #ffffff;
+    font-size: 50px;
     margin-bottom: 10px; /* Malá mezera mezi nadpisy */
     letter-spacing: 2px; /* Lehce roztáhne písmena od sebe pro modernější vzhled */
 }
 
-/*#endregion*/
+/* Design tlačítka */
+.kontakt {
+    display: inline-block;    /* Zásadní pro správné fungování paddingu */
+    padding: 12px 30px;       /* Vnitřní prostor tlačítka */
+    border: 2px solid #ffffff; /* Tvůj požadovaný malý border */
+    text-decoration: none;    /* Odstraní podtržení textu */
+    color: #ffffff;           /* Barva textu */
+    text-transform: uppercase; /* Všechna písmena velká pro agresivnější vzhled */
+    font-weight: bold;
+    transition: all 0.3s ease; /* Plynulý přechod mezi stavy (hover) */
+    margin-top: 15px;
+}
+
+/* Hover efekt - co se stane při najetí myší */
+.kontakt:hover {
+    background-color: #ffffff; /* Tlačítko se "vyplní" bílou */
+    color: #000000;              /* Text zčerná, aby byl na bílé vidět */
+    cursor: pointer;          /* Ukáže ikonku ruky */
+}
+
+/* #endregion */
 
 /* #region Nabídka služeb */
 
@@ -139,23 +98,5 @@ hr {
 .nabidka-sluzeb .nabidka p{
     max-width: 500px;
     padding: 15px 0;
-}
-/* #endregion */
-
-/* #region Footer */
-.zapati {
-    background-color: #f9f9f9;
-    color: #000000;
-    text-align: center;
-    padding: 20px;
-}
-
-.zapati .zapati-text p{
-    margin: 10px;
-}
-
-.email{
-    text-decoration: none;
-    color: #000000;
 }
 /* #endregion */

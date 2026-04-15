@@ -1,11 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merch : Teriyaki Boyz</title>
+    <link rel="stylesheet" href="style/merch.css">
+    <link rel="stylesheet" href="style/same-style.css">
+    <link rel="icon" href="images/Teriyaki-boyz.png" type="image/x-icon">
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <div class="logo">
+            <img src="images/Teriyaki-boyz.png" alt="Teriyaki Boyz logo">
+            <a href="index.html">Teriyaki Boyz</a>
+        </div>
+
+        <nav>
+            <ul class="hlavni-menu">
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="services.html">Služby</a></li>
+                <li><a href="photogalery.html">Fotogalerie</a></li>
+                <li><a href="merch.html" class="aktivni">Merch</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main logo with text -->
+    <section class="hero-banner">
+        <div class="hero-obsah">
+            <h1>MERCH</h1>
+        </div>
+    </section>
+
+    <!-- Merch section -->
+    <section class="sekce-merch">
+        <div class="nadpis">
+            <h2>Tento merch je k dostání pouze na prodejně!</h2> <br>
+            <h3>
+                Neváhejte si ho rezervovat pomocí <a class="odkaz-formular" href="contact.html">kontaktního
+                    formuláře</a>.
+            </h3>
+        </div>
+        <div class="merch-grid">
+            <article class="merch-karta">
+                <img src="images/merch/čepice.png" alt="Černá čepice s logem Teriyaki Boyz">
+                <h3>Čepice</h3>
+                <p>Klasická kšiltovka s precizní výšivkou, která skvěle doplní tvůj každodenní outfit nejen na
+                    autosrazech.</p>
+                <a href="contact.html" class="btn-rezervovat">To chci!</a>
+            </article>
+
+            <article class="merch-karta">
+                <img src="images/merch/triko.png" alt="Černé triko s logem Teriyaki Boyz">
+                <h3>Triko</h3>
+                <p>Prémiové bavlněné triko s naším logem, ve kterém uděláš parádu v garáži i ve městě.</p>
+                <a href="contact.html" class="btn-rezervovat">To chci!</a>
+            </article>
+
+            <article class="merch-karta">
+                <img src="images/merch/mikina.png" alt="Černá mikina s logem Teriyaki Boyz">
+                <h3>Mikina</h3>
+                <p>Poctivá a teplá mikina s kapucí, ideální pro dlouhé chladné večery strávené laděním tvého auta.</p>
+                <a href="contact.html" class="btn-rezervovat">To chci!</a>
+            </article>
+
+            <article class="merch-karta">
+                <img src="images/merch/stromek.png" alt="Černý vonný stromeček s logem Teriyaki Boyz">
+                <h3>Vonný stromeček</h3>
+                <p>Stylový doplněk do interiéru, který tvému vozu dodá svěžest a ukáže, do jaké party patříš.</p>
+                <a href="contact.html" class="btn-rezervovat">To chci!</a>
+            </article>
+
+            <article class="merch-karta">
+                <img src="images/merch/ponožky.png" alt="Černé ponožky s logem Teriyaki Boyz">
+                <h3>Ponožky</h3>
+                <p>Pohodlné ponožky s decentním motivem pro ty, kteří chtějí mít svůj styl vyladěný do posledního
+                    detailu.</p>
+                <a href="contact.html" class="btn-rezervovat">To chci!</a>
+            </article>
+
+            <article class="merch-karta">
+                <img src="images/merch/bucket-hat.png" alt="Černá Bucket Hat s logem Teriyaki Boyz">
+                <h3>Bucket Hat</h3>
+                <p>Trendy klobouček pro maximální pohodlí a nezaměnitelný streetwearový styl během slunečných letních
+                    dnů.</p>
+                <a href="contact.html" class="btn-rezervovat">To chci!</a>
+            </article>
+        </div>
+        <hr>
+    </section>
+
+    <!-- Pricing section -->
+    <section class="cenik">
+        <h2>Ceník</h2>
+        <div class="tabulka">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produkt</th>
+                        <th class="middle">Velikost</th>
+                        <th>Cena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Čepice</td>
+                        <td class="middle">Univerzální</td>
+                        <td>450 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Triko</td>
+                        <td class="middle">S, M, L, XL, XXL</td>
+                        <td>600 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Mikina</td>
+                        <td class="middle">S, M, L, XL, XXL</td>
+                        <td>1 200 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Vonný stromeček</td>
+                        <td class="middle">Univerzální</td>
+                        <td>100 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Ponožky</td>
+                        <td class="middle">39-42, 43-46</td>
+                        <td>250 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Bucket hat</td>
+                        <td class="middle">S/M, L/XL</td>
+                        <td>550 Kč</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+    </section>
+
+    <!-- Footer with contact information and copyright -->
+    <section class="zapati">
+        <div class="zapati-text">
+            <p class="skolni-projekt">
+                <b>Upozornění:</b> Tento web je vytvořen výhradně jako studentský zápočtový projekt.
+            </p>
+            <p>Máte dotaz? Napište nám: <a class="email"
+                    href="mailto:teriyaki.boyz.motorworks@gmail.com">teriyaki.boyz.motorworks@gmail.com</a></p>
+            <p>
+                <small>&copy; 2026 Marek Bulíček. Všechna práva vyhrazena.</small><br>
+                <small>Poslední aktualizace: 15. dubna 2026</small>
+            </p>
+        </div>
+    </section>
+
 </body>
+
 </html>
