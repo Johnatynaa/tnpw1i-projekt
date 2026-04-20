@@ -1,12 +1,12 @@
 # Požadavky
 ## Aktuálně nesplněné požadavky
 ### Rozvržení stránky
-- [ ] Použita metaznačka viewport pro zobrazení na mobilu
-- [ ] Responzivní návrh rozložení pro zobrazení na mobilu a na tabletu, nejlépe s využitím 
+- [x] Použita metaznačka viewport pro zobrazení na mobilu
+- [x] Responzivní návrh rozložení pro zobrazení na mobilu a na tabletu, nejlépe s využitím 
 ### Barvy, grafika, multimédia
-- [ ] Grafika je optimalizována pro web a načítání stránky výrazně nezpomaluje 
+- [x] Grafika je optimalizována pro web a načítání stránky výrazně nezpomaluje 
 ### Navigace, funkčnost
-- [ ] Řádné zobrazení na mobilu a tabletu
+- [x] Řádné zobrazení na mobilu a tabletu
 ### Ostatní podmínky
 - [ ] Kód HTML i CSS je validní; výstup z validátoru je přiložen do protokolu
 ## Rozvržení stránky

@@ -11,34 +11,24 @@
 /*#endregion*/
 
 /* #region Hero banner 2 */
-/* Styl pro sekci hero banner 2 */
 .hero-banner-2 {
-    /* Tady se děje to kouzlo - vložíš fotku na pozadí */
-    /* Nezapomeň upravit cestu k obrázku podle tvých složek */
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url('../images/services/background2.jpg');
-    
-    /* Tyto dvě vlastnosti zajistí, že se obrázek nezdeformuje a vyplní celý blok */
+
     background-size: cover;
     background-position: center;
-    
-    /* Nastavíme minimální výšku banneru, aby byl pěkně velký */
-    /* Můžeš zkusit i hodnotu např. '80vh' (80 % výšky obrazovky) */
-    min-height: 500px; 
-    
-    /* Znovu použijeme náš oblíbený Flexbox pro vycentrování textu uvnitř */
+    min-height: 500px;
     display: flex;
-    justify-content: center; /* Horizontálně na střed */
-    align-items: center;     /* Vertikálně na střed */
+    justify-content: center;
+    align-items: center;
 }
 
-/* Stylování samotného textu */
 .hero-obsah-2 {
-    text-align: center; /* Aby byly oba nadpisy vycentrované vůči sobě */
+    text-align: center;
 }
 
-.hero-obsah-2 .kontakt{ 
+.hero-obsah-2 .kontakt {
     padding: 10px 20px;
     text-decoration: none;
     font-size: 50px;
@@ -49,37 +39,35 @@
 .hero-obsah-2 h2 {
     color: #ffffff;
     font-size: 50px;
-    margin-bottom: 10px; /* Malá mezera mezi nadpisy */
-    letter-spacing: 2px; /* Lehce roztáhne písmena od sebe pro modernější vzhled */
+    margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
-/* Design tlačítka */
 .kontakt {
-    display: inline-block;    /* Zásadní pro správné fungování paddingu */
-    padding: 12px 30px;       /* Vnitřní prostor tlačítka */
-    border: 2px solid #ffffff; /* Tvůj požadovaný malý border */
-    text-decoration: none;    /* Odstraní podtržení textu */
-    color: #ffffff;           /* Barva textu */
-    text-transform: uppercase; /* Všechna písmena velká pro agresivnější vzhled */
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
     font-weight: bold;
-    transition: all 0.3s ease; /* Plynulý přechod mezi stavy (hover) */
+    transition: all 0.3s ease;
     margin-top: 15px;
 }
 
-/* Hover efekt - co se stane při najetí myší */
 .kontakt:hover {
-    background-color: #ffffff; /* Tlačítko se "vyplní" bílou */
-    color: #000000;              /* Text zčerná, aby byl na bílé vidět */
-    cursor: pointer;          /* Ukáže ikonku ruky */
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
 }
 
 /* #endregion */
 
 /* #region Nabídka služeb */
 
-.nabidka-sluzeb{
-    padding: 25px 80px; /* Vytvoří dostatek prostoru kolem textu */
-    background-color: #f9f9f9; /* Světle šedé pozadí pro kontrast s hero bannerem */
+.nabidka-sluzeb {
+    padding: 25px 80px;
+    background-color: #f9f9f9;
 }
 
 .nabidka-sluzeb li {
@@ -88,15 +76,32 @@
     list-style-type: none;
 }
 
-.nabidka-sluzeb .nabidka{
+.nabidka-sluzeb .nabidka {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 100px 250px;
 }
 
-.nabidka-sluzeb .nabidka p{
+.nabidka-sluzeb .nabidka p {
     max-width: 500px;
     padding: 15px 0;
+    font-size: 19px;
 }
+
+/* #endregion */
+
+/* #region Responzivita */
+@media (max-width: 800px) {
+
+    .nabidka-sluzeb .nabidka {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nabidka-sluzeb .nabidka p {
+        max-width: 100%;
+    }
+}
+
 /* #endregion */

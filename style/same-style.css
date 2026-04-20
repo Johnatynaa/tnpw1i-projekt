@@ -16,6 +16,25 @@ hr {
     margin: 40px auto;
 }
 
+.menu-checkbox {
+    display: none; 
+}
+
+.menu-ikona {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-ikona .cara {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: 0.3s; 
+}
+
 .header {
     position: absolute;
     top: 0;
@@ -101,4 +120,35 @@ hr {
 .email {
     text-decoration: none;
     color: #000000;
+}
+
+@media (max-width: 800px){
+    .menu-ikona {
+        display: flex;
+    }
+
+    .hlavni-menu {
+        display: none;
+        flex-direction: column; 
+        position: absolute;     
+        top: 90px;              
+        left: 0;
+        width: 100%;            
+        background-color: rgba(0, 0, 0, 0.5); 
+        text-align: center;
+        padding: 30px 0;
+        gap: 20px; 
+    }
+
+    .menu-checkbox:checked ~ .hlavni-menu {
+        display: flex;
+    }
+
+    .hlavni-menu a {
+        font-size: 20px;
+    }
+
+    .hero-banner {
+        min-height: 500px !important;
+    }
 }

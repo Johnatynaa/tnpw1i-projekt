@@ -22,22 +22,16 @@
     margin: 40px auto;
 }
 
-/* Samotná karta - hrubý obrys a příprava na zarovnání textů */
 .merch-karta {
     border: 1px solid #e0e0e0;
-    /* Jemný šedý rámeček */
     border-radius: 8px;
-    /* Lehce zakulacené rohy */
     padding: 20px;
     text-align: center;
     background-color: #ffffff;
-
-    /* Kouzlo pro zarovnání tlačítka dolů: */
     display: flex;
     flex-direction: column;
 }
 
-/* Obrázek v kartě */
 .sekce-merch {
     padding: 1px 20px;
     background-color: #f9f9f9;
@@ -45,7 +39,6 @@
 
 .sekce-merch .nadpis {
     padding: 70px;
-    /* Vytvoří dostatek prostoru kolem textu */
     text-align: center;
 }
 
@@ -64,10 +57,9 @@
     width: 100%;
     height: 200px;
     object-fit: contain;
-    /* Contain zajistí, že se logo merchu neustřihne, ale vejde se celé */
+    /* Roztažený obrázku */
     margin-bottom: 15px;
     background-color: #f9f9f9;
-    /* Světle šedé pozadí pro případ, že má obrázek průhledné pozadí */
 }
 
 /* Textový popis */
@@ -75,17 +67,14 @@
     color: #555;
     margin-bottom: 25px;
     flex-grow: 1;
-    /* TOTO JE TEN TRIK: Text zabere veškeré volné místo a odtlačí tlačítko dolů */
 }
 
 .merch-karta img {
     background-color: #d3d3d3;
 }
 
-/* Tlačítko (připravené v té modré barvě podle obrázku) */
 .btn-rezervovat {
     display: block;
-    /* Roztáhne tlačítko přes celou šířku karty */
     background-color: #0d6efd;
     color: #ffffff;
     padding: 12px 0;
@@ -95,10 +84,8 @@
     transition: background-color 0.3s;
 }
 
-/* Jemný hover na tlačítko */
 .btn-rezervovat:hover {
     background-color: #0b5ed7;
-    /* O něco tmavší modrá po najetí myší */
 }
 
 /*#endregion*/
@@ -140,3 +127,12 @@ td {
 }
 
 /*#endregion*/
+
+/* #region Responzivita */
+@media (max-width: 800px) {
+    .merch-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* #endregion */

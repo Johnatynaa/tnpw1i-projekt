@@ -1,5 +1,4 @@
 /* #region Hero banner 1 */
-/* Styl pro hero banner */
 .hero-banner {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -19,45 +18,30 @@
     background-color: #f9f9f9;
 }
 
-/* Samotná mřížka */
 .grid-galerie {
     display: grid;
-    /* ZDE JE TO KOUZLO: Udělej 3 sloupce, každý o velikosti 1 zlomku (1fr = 1 fraction) */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    /* Nastaví dokonalé mezery 20px mezi všemi fotkami i řádky */
     max-width: 1200px;
-    /* Zabrání tomu, aby se galerie na 4K monitoru nehezky roztáhla */
     margin: 40px auto 0;
-    /* Vycentruje celou mřížku na střed obrazovky */
 }
 
-/* Reset pro výchozí chování tagu figure */
 .foto-polozka {
     margin: 0;
     overflow: hidden;
-    /* Důležité pro hover efekt - aby se zvětšená fotka nevylila ven */
     border-radius: 8px;
-    /* Jemně zaoblené rohy působí luxusněji */
 }
 
-/* Nastavení samotných obrázků */
 .foto-polozka img {
     width: 100%;
     height: 300px;
-    /* Natvrdo určíme výšku, aby to udělalo přesně ty 2 řádky */
     object-fit: cover;
-    /* Ořízne obrázek tak, aby vyplnil prostor bez deformace */
     display: block;
-    /* Odstraní drobnou neviditelnou mezeru, co dělají obrázky */
     transition: transform 0.4s ease;
-    /* Plynulá animace */
 }
 
-/* Prémiový detail: Fotka se po najetí myší lehce přiblíží */
 .foto-polozka img:hover {
     transform: scale(1.05);
-    /* Zvětší obrázek o 5 % */
     cursor: pointer;
 }
 
@@ -65,37 +49,42 @@
 
 /*#region Lightbox */
 .lightbox {
-    display: none; /* Normálně je to úplně schované */
-    position: fixed; /* Přilepí to na obrazovku */
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Poloprůhledné černé pozadí */
-    z-index: 1001; /* Zajistí, že to bude úplně nad vším ostatním na webu */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1001;
 }
 
-/* --- TOTO JE TEN TRIK: Zobrazení po kliknutí --- */
 .lightbox:target {
-    display: flex; /* Flexboxem fotku krásně vycentrujeme doprostřed */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Samotná velká fotka uvnitř lightboxu */
 .lightbox img {
     max-width: 90%;
     max-height: 90%;
-    border: 2px solid white; /* Bílý rámeček pro efekt */
+    border: 2px solid white;
 }
 
-/* Neviditelné tlačítko pro zavření, které vyplní zbytek černé obrazovky */
 .lightbox-zavrit {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    cursor: default; /* Kursor se změní zpět na šipku */
+    cursor: default;
+}
+/* #endregion */
+
+/* #region Responzivita */
+@media (max-width: 800px){
+    .grid-galerie {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 /* #endregion */
